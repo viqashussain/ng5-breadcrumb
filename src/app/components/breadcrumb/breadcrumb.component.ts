@@ -9,7 +9,7 @@ import {BreadcrumbService} from './breadcrumb.service';
 @Component({
     selector: 'breadcrumb',
     template: `
-        <ul [class.breadcrumb]="useBootstrap">
+        <ul *ngIf="_urls.length > 0" [class.breadcrumb]="useBootstrap">
             <li *ngFor="let url of _urls; let last = last" [ngClass]="{'breadcrumb-item': useBootstrap, 'active': last}"> <!-- disable link of last item -->
                 <a role="button" *ngIf="!last && url == prefix" (click)="navigateTo('/')">{{url}}</a>
                 <a role="button" *ngIf="!last && url != prefix" (click)="navigateTo(url)">{{friendlyName(url)}}</a>
