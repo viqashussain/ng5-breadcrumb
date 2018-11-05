@@ -1,5 +1,5 @@
 {
-  "name": "@akiocloud/ng5-breadcrumb",
+  "name": "@viqashussain/ng5-breadcrumb",
   "version": "0.0.7",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,7 @@
     "minify": "uglifyjs dist/bundles/breadcrumb.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/breadcrumb.umd.min.js",
     "build": "npm run transpile && npm run package && npm run minify"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^5.0.0",
     "@angular/common": "^5.0.0",
